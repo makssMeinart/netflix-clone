@@ -1,8 +1,7 @@
 import styled from "styled-components/macro"
 
 export const Item = styled.div`
-  border-top: 5px solid #222;
-  border-bottom: 5px solid #222;
+  border-bottom: 8px solid #222;
 `
 
 export const Inner = styled.div`
@@ -18,8 +17,8 @@ export const Inner = styled.div`
   }
 
   @media (max-width: 1280px) {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 
   @media (max-width: 600px) {
