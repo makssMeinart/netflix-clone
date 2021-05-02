@@ -14,7 +14,9 @@ export const Title = styled.h4`
 `
 
 export const Wrapper = styled.div`
-  height: 60px;
+  height: 65px;
+  margin: 0 auto;
+  max-width: 665px;
   display: flex;
   justify-content: space-between;
 

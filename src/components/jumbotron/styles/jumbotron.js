@@ -2,6 +2,10 @@ import styled from "styled-components/macro"
 
 export const Item = styled.div`
   border-bottom: 8px solid #222;
+
+  &:first-child {
+    border-top: 8px solid #222;
+  }
 `
 
 export const Inner = styled.div`
@@ -22,8 +26,8 @@ export const Inner = styled.div`
   }
 
   @media (max-width: 600px) {
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 `
 
@@ -59,15 +63,16 @@ export const Title = styled.h2`
 
 export const Subtitle = styled.p`
   font-size: 1.625rem;
-  max-width: 547px;
+  max-width: 90%;
 
   @media (max-width: 1000px) {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   @media (max-width: 600px) {
-    font-size: .9rem;
+    font-size: 0.9rem;
     max-width: 320px;
+    width: 100%;
   }
 `
 

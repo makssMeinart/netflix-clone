@@ -3,7 +3,6 @@ import { OptForm } from "../components"
 import dataFaqs from "../fixtures/faqs.json"
 
 export function AccordionContainer() {
-  console.log(dataFaqs)
 
   return (
     <Accordion>
