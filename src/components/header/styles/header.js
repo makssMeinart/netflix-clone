@@ -3,9 +3,10 @@ import { Link as ReactRouterLink } from "react-router-dom"
 
 export const Background = styled.div`
   display: flex;
-  min-height: 800px;
+  height: fit-content;
   flex-direction: column;
-  background: url(${({src}) => (src ? `../images/misc/${src}.jpg` : `../images/misc/home-bg.jpg` )});
+  background: url(${({ src }) =>
+    src ? `../images/misc/${src}.jpg` : `../images/misc/home-bg.jpg`});
 
   @media screen and (max-width: 760px) {
     min-height: 600px;
@@ -16,24 +17,35 @@ export const Background = styled.div`
   }
 `
 
-export const Wrapper = styled.div`
-  align-self: center;
-  max-width: 917px;
-  width: 100%;
-  padding: 9.5rem 1.5rem 3rem 1.5rem;
-  text-align: center;
+export const Content = styled.div`
+  padding: 5rem 0;
 
-
-  @media screen and (max-width: 760px) {
-    padding-top: 7.5rem;
-    padding-bottom: 4rem;
-    max-width: 600px;
+  @media screen and (max-width: 900px) {
+    padding: 4rem 0;
   }
 
-  @media screen and (max-width: 500px) {
-    padding-top: 3rem;
-    padding-bottom: 3.5rem;
-    max-width: 400px;
+  @media screen and (max-width: 760px) {
+    padding: 3rem 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 0;
+  }
+`
+
+export const Wrapper = styled.div`
+  width: 100%;
+  padding: 75px 0;
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media screen and (max-width: 950px) {
+    max-width: 85%;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding-top: 40px;
   }
 `
 
@@ -42,11 +54,24 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 0 3.5rem;
+  z-index: 10;
+
+  @media screen and (max-width: 760px) {
+    padding: 0 2rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0 1rem;
+  }
 `
 export const Logo = styled.img`
   width: 133px;
+
+  @media screen and (max-width: 500px) {
+    width: 90px;
+  }
 `
 export const ButtonLink = styled(ReactRouterLink)`
   font-size: 1.1rem;

@@ -100,8 +100,10 @@ export const Button = styled.button`
 
   @media screen and (max-width: 950px) {
     width: 100px;
-    padding: 0.4em 0.8em;
     align-self: center;
-    margin-top: 2.5rem;
+    margin-top: .5rem;
+    font-size: 1.3rem;
+    padding: .7rem .7rem;
+    min-width: 160px;
   }
 `

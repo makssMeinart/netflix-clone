@@ -1,7 +1,10 @@
 import * as ROUTES from "../constants/routes"
+import { useLocation } from "react-router-dom"
 import { Header } from "../components"
 
 export function HeaderContainer({ children }) {
+  let location = useLocation()
+
   return (
     <Header>
       <Header.Inner>
@@ -10,9 +13,15 @@ export function HeaderContainer({ children }) {
           alt="Nerflix"
           to={ROUTES.HOME}
         />
-        <Header.ButtonLink to={ROUTES.SIGN_IN}></Header.ButtonLink>
+        {console.log(location.pathname)}
+
+        {location.pathname !== "/signin" ? (
+          <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
+        ) : (
+          null
+        )}
       </Header.Inner>
-      <Header.Wrapper>{children}</Header.Wrapper>
+      {children}
     </Header>
   )
 }

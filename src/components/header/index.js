@@ -4,7 +4,8 @@ import {
   Container,
   Logo,
   ButtonLink,
-  Wrapper
+  Content,
+  Wrapper,
 } from "./styles/header"
 
 export default function Header({ bg = true, children, ...restProps}) {
@@ -24,8 +25,12 @@ Header.Logo = function HeaderLogo({to, ...restProps}) {
   )
 }
 
-Header.ButtonLink = function HeaderButtonLink({to,  ...restProps}) {
-  return <ButtonLink to={to} {...restProps} >Sign In</ButtonLink>
+Header.ButtonLink = function HeaderButtonLink({to, children,  ...restProps}) {
+  return <ButtonLink to={to} {...restProps} >{children}</ButtonLink>
+}
+
+Header.Content = function HeaderContent({children, ...restProps}) {
+  return <Content {...restProps} >{children}</Content>
 }
 
 Header.Wrapper = function HeaderWrapper({children, ...restProps}) {

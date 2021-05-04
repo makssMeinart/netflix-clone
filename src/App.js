@@ -1,8 +1,10 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import * as ROUTES from "./constants/routes"
+import { BrowserRouter as Router, Route} from "react-router-dom"
 import { Browse, Home, Signin, Signup } from "./pages"
+import * as ROUTES from "./constants/routes"
+import { useContext } from "react"
 
 export default function App() {
+
   return (
     <Router>
       <Route exact path={ROUTES.HOME}>
