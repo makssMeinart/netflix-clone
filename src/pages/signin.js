@@ -1,11 +1,16 @@
+import { useState, useContext } from "react"
+import { useHistory } from "react-router-dom"
+import { FirebaseContext } from "../context/firebase"
+import * as ROUTES from "../constants/routes"
+import { MiniFooterContainer } from "../containers/miniFooter"
 import { HeaderContainer } from "../containers/header"
 import { FooterContainer } from "../containers/footer"
 import { Form } from "../components"
-import { useState } from "react"
-import * as ROUTES from "../constants/routes"
-import { MiniFooterContainer } from "../containers/miniFooter"
 
 export default function Signin() {
+  const history = useHistory()
+  // useContext
+  const { firebase } = useContext(FirebaseContext)
   // useStates
   const [showPassword, setShowPassword] = useState(true)
   const [emailAddress, setEmailAddress] = useState("")
@@ -24,14 +29,28 @@ export default function Signin() {
     borderBottom: "3px solid #e87c03",
   }
 
-  const handleSignIn = e => {
+  // SignIn Logic
+  const handleSignIn = (e) => {
     e.preventDefault()
+
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(emailAddress, password)
+      .then(() => {
+        // Get us to browse page
+        history.push(ROUTES.BROWSE)
+      })
+      .catch((error) => {
+        setEmailAddress("")
+        setPassword("")
+        setError(error.message)
+      })
   }
 
   return (
     <>
       <HeaderContainer>
-        <Form.Frame>
+        <Form.Frame onSubmit={handleSignIn} method="POST" >
           <Form.Inner>
             <Form.Title>Sign In</Form.Title>
             {error && <Form.Error>{error}</Form.Error>}
@@ -69,7 +88,11 @@ export default function Signin() {
             </Form.InputFrame>
 
             {/* SUBMIT BUTTON */}
-            <Form.Button onClick={handleSignIn} disabled={isInvalid} type="submit">
+            <Form.Button
+              onClick={handleSignIn}
+              disabled={isInvalid}
+              type="submit"
+            >
               Sign In
             </Form.Button>
 

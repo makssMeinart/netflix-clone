@@ -13,13 +13,10 @@ export function HeaderContainer({ children }) {
           alt="Nerflix"
           to={ROUTES.HOME}
         />
-        {console.log(location.pathname)}
 
-        {location.pathname !== "/signin" ? (
+        {location.pathname === ROUTES.HOME ? (
           <Header.ButtonLink to={ROUTES.SIGN_IN}>Sign In</Header.ButtonLink>
-        ) : (
-          null
-        )}
+        ) : null}
       </Header.Inner>
       {children}
     </Header>

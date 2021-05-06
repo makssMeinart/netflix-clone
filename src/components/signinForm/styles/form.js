@@ -5,7 +5,7 @@ export const Container = styled.div``
 export const Frame = styled.form`
   max-width: 450px;
   margin: 0 auto;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0, 0, 0, 0.75);
   padding: 60px 68px 40px;
   padding-bottom: 130px;
   border-radius: 4px;
@@ -15,18 +15,20 @@ export const Frame = styled.form`
     margin-top: -85px;
     min-width: 100%;
     margin-bottom: 0;
-    padding: 6rem 2rem 5rem 2rem; 
+    padding: 6rem 2rem 5rem 2rem;
     background: #000;
   }
 `
 export const Inner = styled.div``
 export const Error = styled.div`
+  word-break: break-all;
   font-size: 0.875rem;
+  word-wrap: wrap;
   line-height: 1.3;
-  padding: .5rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   margin-bottom: 1rem;
   border-radius: 4px;
-  background-color: #E87C03;
+  background-color: #e87c03;
   color: white;
 `
 export const Title = styled.h1`
