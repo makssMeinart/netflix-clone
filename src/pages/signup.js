@@ -38,16 +38,11 @@ export default function Signup() {
     firebase
       .auth()
       .createUserWithEmailAndPassword(emailAddress, password)
-      .then(resp => {
-        resp.user
-          .updateProfile({
-            displayName: firstName,
-            photoURL: `/images/users/${Math.floor(Math.random() * 5) + 1}.png`
-          })
-          .then(() => {
-            history.push(ROUTES.BROWSE)
-            console.log(resp)
-          })
+      .then((result) => {
+        result.user.updateProfile({
+          displayName: firstName,
+          photoURL: Math.floor(Math.random() * 5) + 1
+        })
       })
       .catch(error => {
         setFirstName("")

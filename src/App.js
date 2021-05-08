@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import { Browse, Home, Signin, Signup } from "./pages"
 import * as ROUTES from "./constants/routes"
-import { useContext } from "react"
+import { createContext, useContext } from "react"
 import { IsUserRedirect, ProtectedRoute } from "./helpers/routes"
-import { useAuthListener, useContent } from "./hooks"
+import { useAuthListener } from "./hooks"
 
 export default function App() {
   const { user } = useAuthListener()
@@ -24,7 +24,7 @@ export default function App() {
         path={ROUTES.SIGN_IN}
       >
         <Signin />
-      </IsUserRedirect> 
+      </IsUserRedirect>
       <IsUserRedirect
         user={user}
         loggedInPath={ROUTES.BROWSE}
