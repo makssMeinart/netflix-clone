@@ -12,7 +12,7 @@ export default function browseFilter({series,films}) {
       },
       {
         title: "Children",
-        data: series.filter(item => item.ganre === "children")
+        data: series.filter(item => item.genre === "children")
       },
       {
         title: "Crime",
@@ -30,7 +30,7 @@ export default function browseFilter({series,films}) {
       },
       {
         title: "Thriller",
-        data: films.filter(item => item.ganre === "thriller")
+        data: films.filter(item => item.genre === "thriller")
       },
       {
         title: "Children",

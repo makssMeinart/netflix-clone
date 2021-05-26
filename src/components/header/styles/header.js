@@ -20,6 +20,8 @@ export const Background = styled.div`
 
   @media screen and (max-width: 760px) {
     min-height: 600px;
+    ${({ backgroundRemoveOnSmallVP }) => 
+      backgroundRemoveOnSmallVP && "min-height: fit-content"}
   }
 
   @media screen and (max-width: 500px) {
