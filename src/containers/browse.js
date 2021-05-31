@@ -53,7 +53,7 @@ export function BrowseContainer({ slides }) {
         <Header.Inner>
           <Header.Group>
             <Header.Logo
-              src={"/images/icons/logo.svg"}
+              src={"images/icons/logo.svg"}
               alt="Nerflix"
               to={ROUTES.HOME}
             />
@@ -131,7 +131,7 @@ export function BrowseContainer({ slides }) {
             <Card.Feature category={category}>
               <Player>
                 <Player.Button />
-                <Player.Video src={`/videos/bunny.mp4`} />
+                <Player.Video src={`videos/bunny.mp4`} />
               </Player>
             </Card.Feature>
           </Card>

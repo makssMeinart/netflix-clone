@@ -6,7 +6,7 @@ export const Background = styled.div`
   height: fit-content;
   flex-direction: column;
   background: url(${({ src }) =>
-    src ? `../images/misc/${src}.jpg` : `../images/misc/home-bg.jpg`});
+    src ? `images/misc/${src}.jpg` : `images/misc/home-bg.jpg`});
   background-size: cover;
   background-position: center center center center;
   background-repeat: no-repeat;

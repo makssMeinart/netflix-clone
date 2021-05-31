@@ -26,7 +26,7 @@ export const Spinner = styled.div`
     width: 150px;
     height: 150px;
     transform: translate(-50%, -50%);
-    background-image: url(/images/misc/spinner.png);
+    background-image: url(images/misc/spinner.png);
     background-size: contain;
     background-repeat: no-repeat;
     animation-name: spin;

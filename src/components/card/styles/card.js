@@ -146,6 +146,7 @@ export const Entities = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 30px;
+  justify-content: space-around;
 `
 
 export const Item = styled.div`

@@ -9,7 +9,7 @@ export function HeaderContainer({ children }) {
     <Header>
       <Header.Inner>
         <Header.Logo
-          src={"/images/icons/logo.svg"}
+          src={"images/icons/logo.svg"}
           alt="Nerflix"
           to={ROUTES.HOME}
         />

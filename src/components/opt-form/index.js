@@ -97,7 +97,7 @@ OptForm.Warning = function OptFormWarning({ children, ...restProps }) {
 OptForm.Button = function OptFormButton({ children, ...restProps }) {
   return (
     <Button {...restProps}>
-      {children} <img src="/images/icons/chevron-right.png" />
+      {children} <img src="images/icons/chevron-right.png" />
     </Button>
   )
 }
